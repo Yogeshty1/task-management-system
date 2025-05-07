@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
-    "build": "node ./node_modules/typescript/bin/tsc",
+    "prebuild": "npm install typescript && node ./node_modules/typescript/bin/tsc",
+    "build": "echo 'Build completed'",
     "seed": "ts-node src/scripts/seed.ts",
     "test": "jest"
   },
