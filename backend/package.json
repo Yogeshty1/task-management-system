@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "dev": "ts-node src/index.ts",
     "build": "tsc",
     "seed": "ts-node src/scripts/seed.ts",
     "test": "jest"
@@ -26,8 +26,7 @@
     "express-validator": "^7.0.1",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.3",
-    "socket.io": "^4.6.1",
-    "task-management-backend": "file:"
+    "socket.io": "^4.6.1"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
