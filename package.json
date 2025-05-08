@@ -6,7 +6,7 @@
   "scripts": {
     "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
     "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
-    "build": "cd frontend && npm install --legacy-peer-deps && next build",
+    "build": "npm install --legacy-peer-deps && next build",
     "start": "cd backend && npm start",
     "lint": "next lint"
   },

@@ -57,10 +57,6 @@ export default function TaskDetailsPage({ params }: { params: { id: string } }) 
     resolver: yupResolver(schema)
   });
 
-  useEffect(() => {
-    fetchTask();
-  }, [fetchTask]);
-
   const fetchTask = async () => {
     try {
       setLoading(true);
@@ -81,6 +77,10 @@ export default function TaskDetailsPage({ params }: { params: { id: string } }) 
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchTask();
+  }, []);
 
   const fetchUsers = async () => {
     try {
