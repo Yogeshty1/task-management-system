@@ -13,6 +13,9 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+# Set the working directory to the frontend directory
+WORKDIR /app
+
 # Build the Next.js application
 RUN npm run build
 
