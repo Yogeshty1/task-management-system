@@ -55,6 +55,20 @@ io.on('connection', (socket) => {
   });
 });
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Task Management System API',
+    status: 'running',
+    version: '1.0.0',
+    endpoints: {
+      health: '/health',
+      users: '/api/users',
+      tasks: '/api/tasks'
+    }
+  });
+});
+
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/tasks', taskRoutes);
